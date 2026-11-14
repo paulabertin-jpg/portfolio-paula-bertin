@@ -1,0 +1,6 @@
+# Archivos de sistema de macOS
+.DS_Store
+
+# Archivos de trabajo (no se usan en el sitio)
+*.psd
+*.ai
