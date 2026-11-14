@@ -1,0 +1,41 @@
+
+
+#error {
+    min-height: 75vh;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.error-codigo {
+    font-size: 12rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #5d5c5c;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+#error h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+#error p:not(.error-codigo) {
+    max-width: 550px;
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(-3deg);
+    }
+}

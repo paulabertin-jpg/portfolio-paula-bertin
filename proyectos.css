@@ -1,0 +1,125 @@
+/* ==========================================================
+   PROYECTOS.CSS — estilos específicos de proyectos.html
+   ========================================================== */
+
+#proyectos {
+    background-color: #f5f5f5;
+    padding: 6rem 5%;
+    min-height: 80vh;
+}
+
+/* Cada proyecto: imagen a un lado, texto al otro */
+.proyecto-card {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Alterna el lado de la imagen en los proyectos pares */
+.proyecto-card:nth-child(even) .col-1 {
+    order: 2;
+}
+
+.col-1 {
+    min-height: 400px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.col-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.proyecto-card:hover .col-1 img {
+    transform: scale(1.05);
+}
+
+.col-2 h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.categoria {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 0.2rem 0.8rem;
+    border: 1px solid #333;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.proyecto-destacado {
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #333;
+}
+
+.destacado-texto {
+    max-width: 750px;
+    margin-bottom: 2.5rem;
+}
+
+.destacado-texto h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.destacado-texto p:not(.categoria) {
+    margin-bottom: 1rem;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.galeria figure {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.galeria img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 854 / 608;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galeria figure:hover img {
+    transform: scale(1.06);
+}
+
+.galeria figcaption {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+/* Las láminas aparecen una detrás de otra */
+.galeria figure {
+    animation: aparecer 0.6s ease-out both;
+}
+
+.galeria figure:nth-child(2) { animation-delay: 0.1s; }
+.galeria figure:nth-child(3) { animation-delay: 0.2s; }
+.galeria figure:nth-child(4) { animation-delay: 0.3s; }
+.galeria figure:nth-child(5) { animation-delay: 0.4s; }
+.galeria figure:nth-child(6) { animation-delay: 0.5s; }

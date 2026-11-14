@@ -1,0 +1,43 @@
+/* ==========================================================
+   SERVICIOS.CSS — estilos específicos de servicios.html
+   ========================================================== */
+
+#servicios {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 6rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.pill {
+    background-color: #ffffff;
+    padding: 2rem;
+    min-height: 280px;
+    border-radius: 1.5rem;
+    border: 2px solid #333;
+    color: #000;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.pill:hover {
+    transform: translateY(-5px);
+    background-color: #faf9ef;
+    box-shadow: 0 10px 0 #333;
+}
+
+.pill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Las tarjetas entran una detrás de otra */
+.pill {
+    animation: aparecer 0.6s ease-out both;
+}
+
+.pill:nth-child(2) { animation-delay: 0.1s; }
+.pill:nth-child(3) { animation-delay: 0.2s; }
+.pill:nth-child(4) { animation-delay: 0.3s; }
