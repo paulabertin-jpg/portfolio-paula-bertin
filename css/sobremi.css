@@ -109,3 +109,44 @@
         padding: 1.5rem;
     }
 }
+
+/* ---------- Manifiesto (presentación al inicio de Sobre mí) ---------- */
+#manifiesto {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5rem auto 2rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #333;
+}
+
+#manifiesto .small-tittle {
+    font-size: 0.8rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    color: #5d5c5c;
+    margin-bottom: 1.2rem;
+}
+
+#manifiesto h2 {
+    max-width: 900px;
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+#manifiesto p:not(.small-tittle) {
+    max-width: 620px;
+    color: #5d5c5c;
+}
+
+@media (max-width: 768px) {
+    #manifiesto {
+        margin-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #manifiesto h2 {
+        font-size: 2rem;
+    }
+}

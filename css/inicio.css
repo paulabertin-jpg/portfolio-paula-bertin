@@ -1,61 +1,153 @@
 /* ==========================================================
-   INICIO.CSS — estilos específicos de index.html
+   INICIO.CSS — portada con trabajos flotantes
    ========================================================== */
 
 #inicio {
-    min-height: 85vh;
-    padding: 5rem 5%;
-    background-color: #5d5c5c;
-    color: #ffffff;
+    position: relative;
+    min-height: calc(100vh - 70px);
+    background-color: #f7f6f0;
+    color: #1a1a1a;
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 6rem 5%;
 }
 
-#inicio > div {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
+/* ---------- Texto central ---------- */
+.inicio-texto {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;   /* deja pasar el mouse a las imágenes */
 }
 
-.small-tittle {
-    font-size: 0.9rem;
-    letter-spacing: 0.15rem;
+.inicio-titulo {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+    line-height: 2;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    color: #1a1a1a;
 }
 
-#inicio h2 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 1.1;
-    margin-bottom: 2rem;
+/* ---------- Trabajos flotantes ---------- */
+.flotantes {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
 
-#inicio > div > p:not(.small-tittle) {
-    max-width: 700px;
-    font-size: 1.1rem;
+.flotante {
+    --mx: 0px;
+    --my: 0px;
+    position: absolute;
+    display: block;
+    transform: translate(var(--mx), var(--my));
+    animation: aparecer-flotante 1s ease-out both;
 }
 
-#inicio .btn {
-    margin-top: 2rem;
+/* cada imagen además "respira" con un flote suave */
+.flotante img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: grayscale(1);
+    opacity: 0.85;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: filter 0.5s, opacity 0.5s, transform 0.5s;
+    animation: flotar-suave 7s ease-in-out infinite;
 }
 
-
-#inicio > div > * {
-    animation: aparecer 0.8s ease-out both;
+.flotante:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.06);
 }
 
-#inicio > div > *:nth-child(2) { animation-delay: 0.15s; }
-#inicio > div > *:nth-child(3) { animation-delay: 0.3s; }
-#inicio > div > *:nth-child(4) { animation-delay: 0.45s; }
+/* nombre del proyecto que aparece al pasar el mouse */
+.flotante span {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.5rem);
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.flotante:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* posición, tamaño y ritmo de cada imagen */
+.f1 { top: 8%;  left: 8%;  width: 230px; animation-delay: 0.1s; }
+.f2 { top: 7%;  left: 66%; width: 270px; animation-delay: 0.25s; }
+.f3 { top: 44%; left: 3%;  width: 180px; animation-delay: 0.4s; }
+.f4 { top: 40%; left: 82%; width: 200px; animation-delay: 0.55s; }
+.f5 { top: 70%; left: 14%; width: 250px; animation-delay: 0.7s; }
+.f6 { top: 72%; left: 70%; width: 220px; animation-delay: 0.85s; }
+.f7 { top: 12%; left: 40%; width: 150px; animation-delay: 1s; }
+.f8 { top: 72%; left: 44%; width: 160px; animation-delay: 1.15s; }
+
+.f2 img, .f5 img { animation-duration: 9s; }
+.f3 img, .f6 img { animation-duration: 6s; animation-delay: -2s; }
+.f4 img, .f7 img { animation-duration: 8s; animation-delay: -4s; }
+
+@keyframes flotar-suave {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -10px; }
+}
+
+@keyframes aparecer-flotante {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* El título de la portada entra con un fundido */
+.inicio-titulo {
+    animation: aparecer 1s ease-out 0.3s both;
+}
+
+/* Sin animaciones para quien las tiene desactivadas en su sistema */
+@media (prefers-reduced-motion: reduce) {
+    .flotante img { animation: none; }
+}
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+    .f1 { width: 150px; }
+    .f2 { width: 170px; }
+    .f5 { width: 160px; }
+    .f6 { width: 140px; }
+    .f3, .f4 { display: none; }
+}
+
+/* Celular: menos imágenes, más chicas, arriba y abajo del texto */
 @media (max-width: 768px) {
     #inicio {
         min-height: auto;
-        padding: 4rem 5%;
+        min-height: 80vh;
+        padding: 4rem 6%;
     }
 
-    #inicio > div > p:not(.small-tittle) {
-        font-size: 1rem;
+    .f3, .f4, .f7, .f8 { display: none; }
+
+    .f1 { top: 3%;  left: 6%;  width: 120px; }
+    .f2 { top: 5%;  left: 60%; width: 130px; }
+    .f5 { top: auto; bottom: 4%; left: 8%;  width: 125px; }
+    .f6 { top: auto; bottom: 6%; left: 58%; width: 120px; }
+
+    .flotante span { display: none; }
+
+    .inicio-titulo {
+        font-size: 0.8rem;
+        letter-spacing: 0.3rem;
     }
 }
