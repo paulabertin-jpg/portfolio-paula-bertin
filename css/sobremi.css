@@ -1,152 +1,106 @@
+/* ==========================================================
+   SOBREMI.CSS — página Sobre mí en formato editorial
+   Títulos gigantes con filete, texto grande y filas de datos
+   con etiqueta chica a la izquierda.
+   ========================================================== */
 
-
-#sobre-mi,
-#musica {
+#bio {
     width: 90%;
     max-width: 1200px;
-    margin: 4rem auto;
+    margin: 4rem auto 6rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #111;
 }
 
-#sobre-mi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-#sobre-mi h2 {
-    font-size: 2.5rem;
+/* ---------- Títulos gigantes ---------- */
+.bio-titulo {
+    font-size: clamp(4rem, 12vw, 10.5rem);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    padding-bottom: 0.15em;
+    border-bottom: 1px solid #111;
     margin-bottom: 1.5rem;
 }
 
-#sobre-mi h3,
-#musica h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+.bio-titulo:not(:first-child) {
+    margin-top: 6rem;
 }
 
-#sobre-mi h3:not(:first-child) {
-    margin-top: 2rem;
+/* ---------- Texto grande ---------- */
+.bio-texto {
+    max-width: 1000px;
+    font-size: clamp(1.6rem, 3vw, 2.7rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    margin-bottom: 2.5rem;
 }
 
-#sobre-mi p {
-    margin-bottom: 1rem;
-}
-
-#sobre-mi ul:not(.herramientas) {
-    margin-left: 1.25rem;
-    list-style: disc;
-}
-
-#sobre-mi li {
-    margin-bottom: 0.5rem;
-}
-
-
-.herramientas {
-    display: flex;
-    flex-wrap: wrap;
+/* ---------- Filas de datos ---------- */
+.bio-fila {
+    display: grid;
+    grid-template-columns: 180px 1fr;
     gap: 1rem;
+    padding: 0.8rem 0 1.4rem;
+    border-top: 1px solid #111;
 }
 
-.herramientas li {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid #333;
-    border-radius: 2rem;
-    transition: 0.3s;
+.bio-etiqueta {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    padding-top: 0.2rem;
 }
 
-.herramientas li:hover {
-    background-color: #faf9ef;
-    transform: translateY(-3px);
+.bio-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
 }
 
-.herramientas img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+.bio-lista li {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #d5d5d5;
 }
 
-/* Reproductor de música */
-#musica {
-    padding: 2.5rem;
-    background-color: #f5f5f5;
-    border-radius: 1.5rem;
+.bio-lista a {
+    transition: opacity 0.3s;
 }
 
-#musica figure {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.bio-lista a:hover {
+    opacity: 0.5;
 }
 
-#musica audio {
-    width: 100%;
-    max-width: 500px;
+/* Los bloques entran de a uno */
+#bio > * {
+    animation: aparecer 0.8s ease-out both;
 }
 
-#musica figcaption {
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
+#bio > *:nth-child(2) { animation-delay: 0.1s; }
+#bio > *:nth-child(3) { animation-delay: 0.2s; }
+#bio > *:nth-child(4) { animation-delay: 0.3s; }
+#bio > *:nth-child(5) { animation-delay: 0.4s; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    #sobre-mi {
+    #bio {
+        margin: 2.5rem auto 4rem;
+    }
+
+    .bio-titulo:not(:first-child) {
+        margin-top: 4rem;
+    }
+
+    .bio-fila {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin: 3rem auto;
+        gap: 0.3rem;
     }
 
-    #sobre-mi h2 {
-        font-size: 2rem;
-    }
-
-    #musica {
-        padding: 1.5rem;
-    }
-}
-
-/* ---------- Manifiesto (presentación al inicio de Sobre mí) ---------- */
-#manifiesto {
-    width: 90%;
-    max-width: 1200px;
-    margin: 5rem auto 2rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid #333;
-}
-
-#manifiesto .small-tittle {
-    font-size: 0.8rem;
-    letter-spacing: 0.25rem;
-    text-transform: uppercase;
-    color: #5d5c5c;
-    margin-bottom: 1.2rem;
-}
-
-#manifiesto h2 {
-    max-width: 900px;
-    font-size: 3rem;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-}
-
-#manifiesto p:not(.small-tittle) {
-    max-width: 620px;
-    color: #5d5c5c;
-}
-
-@media (max-width: 768px) {
-    #manifiesto {
-        margin-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    #manifiesto h2 {
-        font-size: 2rem;
+    .bio-lista {
+        grid-template-columns: 1fr;
     }
 }
