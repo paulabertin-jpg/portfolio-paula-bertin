@@ -123,3 +123,47 @@
 .galeria figure:nth-child(4) { animation-delay: 0.3s; }
 .galeria figure:nth-child(5) { animation-delay: 0.4s; }
 .galeria figure:nth-child(6) { animation-delay: 0.5s; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet y celular: imagen arriba y texto abajo */
+@media (max-width: 768px) {
+    #proyectos {
+        padding: 4rem 5%;
+    }
+
+    .proyecto-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .proyecto-card:nth-child(even) .col-1 {
+        order: 0;
+    }
+
+    .col-1 {
+        min-height: 250px;
+    }
+
+    .proyecto-destacado {
+        margin-bottom: 4rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .destacado-texto h3,
+    .col-2 h3 {
+        font-size: 1.35rem;
+    }
+}

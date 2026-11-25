@@ -39,3 +39,14 @@
         transform: translateY(-15px) rotate(-3deg);
     }
 }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .error-codigo {
+        font-size: 7rem;
+    }
+
+    #error h2 {
+        font-size: 2rem;
+    }
+}

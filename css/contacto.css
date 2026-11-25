@@ -79,3 +79,24 @@
     font-size: 3.5rem;
     line-height: 1.1;
 }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    #contacto,
+    #confirmacion {
+        padding: 4rem 0;
+    }
+
+    .form-fila {
+        grid-template-columns: 1fr;
+    }
+
+    .form-contacto .btn {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    #confirmacion h2 {
+        font-size: 2.3rem;
+    }
+}

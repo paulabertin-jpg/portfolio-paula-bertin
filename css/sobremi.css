@@ -92,3 +92,20 @@
     font-size: 0.9rem;
     opacity: 0.7;
 }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    #sobre-mi {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 3rem auto;
+    }
+
+    #sobre-mi h2 {
+        font-size: 2rem;
+    }
+
+    #musica {
+        padding: 1.5rem;
+    }
+}

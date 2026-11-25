@@ -47,3 +47,15 @@
 #inicio > div > *:nth-child(2) { animation-delay: 0.15s; }
 #inicio > div > *:nth-child(3) { animation-delay: 0.3s; }
 #inicio > div > *:nth-child(4) { animation-delay: 0.45s; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    #inicio {
+        min-height: auto;
+        padding: 4rem 5%;
+    }
+
+    #inicio > div > p:not(.small-tittle) {
+        font-size: 1rem;
+    }
+}
