@@ -23,218 +23,356 @@
     </header>
 
     <main>
-        
-        <section id="proyectos">
-    <div class="proyectos-intro">
-        <h2 class="ed-titulo">Proyectos</h2>
-        <p class="ed-texto">Laburos seleccionados: identidad, editorial, packaging, señalética y contenido.</p>
-    </div>
-    <div class="proyectos-grid">
+    <section class="ed" id="proyectos">
 
-        <article class="proyecto-destacado">
-            <div class="destacado-texto">
-                <h3>BQC GROUP — Rebranding</h3>
-                <p class="categoria">Branding / Manual de marca</p>
+        <h2 class="ed-titulo">Proyectos <sup>selección</sup></h2>
+
+        <div class="proy-encabezado" aria-hidden="true">
+            <span class="col-nombre">proyecto</span>
+            <span class="col-disciplina">disciplina</span>
+            <span class="col-piezas">piezas</span>
+            <span class="col-anio">año</span>
+            <span class="col-signo"></span>
+        </div>
+
+        <div class="proy-lista">
+
+        <article class="proy">
+            <button class="proy-fila" type="button" aria-expanded="false" aria-controls="panel-1">
+                <span class="col-nombre">BQC Group</span>
+                <span class="col-disciplina">Branding</span>
+                <span class="col-piezas">Manual de marca</span>
+                <span class="col-anio">2026</span>
+                <span class="col-signo" aria-hidden="true">+</span>
+            </button>
+
+            <div class="proy-panel" id="panel-1" hidden>
+                <div class="carrusel" data-total="6">
+                    <div class="carrusel-pista">
+                    <figure class="carrusel-slide">
+                        <img src="../img/bqc1.jpg" alt="Logotipo de BQC Group con la bajada Sostenemos tu excelencia" loading="lazy">
+                        <figcaption>Logotipo y bajada</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bqc2.jpg" alt="Lámina del partido conceptual: sostener para elevar" loading="lazy">
+                        <figcaption>Partido conceptual</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bqc3.jpg" alt="Paleta cromática de BQC Group" loading="lazy">
+                        <figcaption>Paleta cromática</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bqc4.jpg" alt="Versiones responsive de la marca BQC" loading="lazy">
+                        <figcaption>Marca gráfica responsive</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bqc5.jpg" alt="Mockup de posters de BQC Group" loading="lazy">
+                        <figcaption>Aplicación en poster</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bqc6.jpg" alt="Piezas de BQC Group para redes sociales" loading="lazy">
+                        <figcaption>Piezas para redes sociales</figcaption>
+                    </figure>
+                    </div>
+                    <div class="carrusel-controles">
+                        <button class="carrusel-ant" type="button" aria-label="Imagen anterior">←</button>
+                        <p class="carrusel-info"><span class="carrusel-num">1</span> / 6 — <span class="carrusel-epigrafe">Logotipo y bajada</span></p>
+                        <button class="carrusel-sig" type="button" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
+
+                <div class="proy-desc">
+                    <h3>BQC GROUP — Rebranding</h3>
+                    <p class="ed-etiqueta">Branding / Manual de marca</p>
                 <p>Rediseño integral de la identidad de una consultora de calidad y auditoría de procesos. Bajo el concepto <strong>"Sostener para elevar"</strong>, la marca evoluciona de un perfil técnico de control a un aliado estratégico para la alta dirección.</p>
                 <p>El manual define el partido conceptual, una paleta cromática inspirada en el entorno del laboratorio, un sistema de marca responsive y sus aplicaciones en piezas gráficas y redes sociales.</p>
-            </div>
-            <div class="galeria">
-                <figure>
-                    <img src="../img/bqc1.jpg" alt="Logotipo de BQC Group con la bajada Sostenemos tu excelencia">
-                    <figcaption>Logotipo y bajada</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bqc2.jpg" alt="Lámina del partido conceptual: sostener para elevar">
-                    <figcaption>Partido conceptual</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bqc3.jpg" alt="Paleta cromática de BQC Group">
-                    <figcaption>Paleta cromática</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bqc4.jpg" alt="Versiones responsive de la marca BQC">
-                    <figcaption>Marca gráfica responsive</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bqc5.jpg" alt="Mockup de posters de BQC Group">
-                    <figcaption>Aplicación en poster</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bqc6.jpg" alt="Piezas de BQC Group para redes sociales">
-                    <figcaption>Piezas para redes sociales</figcaption>
-                </figure>
+                </div>
             </div>
         </article>
 
-        <article class="proyecto-destacado">
-            <div class="destacado-texto">
-                <h3>BAUHAUS-MUSEUM WEIMAR — Merch</h3>
-                <p class="categoria">Merchandising / Packaging</p>
+        <article class="proy">
+            <button class="proy-fila" type="button" aria-expanded="false" aria-controls="panel-2">
+                <span class="col-nombre">Bauhaus-Museum Weimar</span>
+                <span class="col-disciplina">Merch y packaging</span>
+                <span class="col-piezas">Taza, cuaderno y empaques</span>
+                <span class="col-anio">2026</span>
+                <span class="col-signo" aria-hidden="true">+</span>
+            </button>
+
+            <div class="proy-panel" id="panel-2" hidden>
+                <div class="carrusel" data-total="6">
+                    <div class="carrusel-pista">
+                    <figure class="carrusel-slide">
+                        <img src="../img/bauhaus1.jpg" alt="Línea completa de merch Bauhaus: taza, caja, cuaderno y estuche" loading="lazy">
+                        <figcaption>Línea completa</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bauhaus2.jpg" alt="Mockups de la taza y su caja cúbica" loading="lazy">
+                        <figcaption>Taza y caja</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bauhaus3.jpg" alt="Mockups del cuaderno Vorkurs y su estuche" loading="lazy">
+                        <figcaption>Cuaderno y estuche</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bauhaus4.jpg" alt="Gráfica de la taza con el barco de Alma Siedhoff-Buscher" loading="lazy">
+                        <figcaption>Gráfica de la taza</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bauhaus5.jpg" alt="Troquel diseñado de la caja cúbica de la taza" loading="lazy">
+                        <figcaption>Packaging de la taza</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/bauhaus6.jpg" alt="Tapa del cuaderno con triángulo, cuadrado y círculo" loading="lazy">
+                        <figcaption>Tapa del cuaderno</figcaption>
+                    </figure>
+                    </div>
+                    <div class="carrusel-controles">
+                        <button class="carrusel-ant" type="button" aria-label="Imagen anterior">←</button>
+                        <p class="carrusel-info"><span class="carrusel-num">1</span> / 6 — <span class="carrusel-epigrafe">Línea completa</span></p>
+                        <button class="carrusel-sig" type="button" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
+
+                <div class="proy-desc">
+                    <h3>BAUHAUS-MUSEUM WEIMAR — Merch</h3>
+                    <p class="ed-etiqueta">Merchandising / Packaging</p>
                 <p>Línea de merch para el Bauhaus-Museum Weimar que no solo cita la estética Bauhaus, sino que aplica su método: formas geométricas básicas, colores primarios y objetos cotidianos pensados para la producción en serie.</p>
                 <p>La <strong>taza</strong> retoma el <em>Kleines Schiffbauspiel</em> (1923) de Alma Siedhoff-Buscher, y su caja cúbica reúne cuadrado, semicírculo y triángulo en un solo envase. El <strong>cuaderno Vorkurs</strong> reinterpreta el cuestionario de forma y color de Kandinsky, y su estuche con ventana completa la composición recién cuando cuaderno y empaque están juntos.</p>
-            </div>
-            <div class="galeria">
-                <figure>
-                    <img src="../img/bauhaus1.jpg" alt="Línea completa de merch Bauhaus: taza, caja, cuaderno y estuche">
-                    <figcaption>Línea completa</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bauhaus2.jpg" alt="Mockups de la taza y su caja cúbica">
-                    <figcaption>Taza y caja</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bauhaus3.jpg" alt="Mockups del cuaderno Vorkurs y su estuche">
-                    <figcaption>Cuaderno y estuche</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bauhaus4.jpg" alt="Gráfica de la taza con el barco de Alma Siedhoff-Buscher">
-                    <figcaption>Gráfica de la taza</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bauhaus5.jpg" alt="Troquel diseñado de la caja cúbica de la taza">
-                    <figcaption>Packaging de la taza</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/bauhaus6.jpg" alt="Tapa del cuaderno con triángulo, cuadrado y círculo">
-                    <figcaption>Tapa del cuaderno</figcaption>
-                </figure>
+                </div>
             </div>
         </article>
 
-        <article class="proyecto-destacado">
-            <div class="destacado-texto">
-                <h3>MULTUS — Identidad de marca</h3>
-                <p class="categoria">Identidad visual / Papelería y merch</p>
+        <article class="proy">
+            <button class="proy-fila" type="button" aria-expanded="false" aria-controls="panel-3">
+                <span class="col-nombre">Multus</span>
+                <span class="col-disciplina">Identidad visual</span>
+                <span class="col-piezas">Afiches, papelería y merch</span>
+                <span class="col-anio">2026</span>
+                <span class="col-signo" aria-hidden="true">+</span>
+            </button>
+
+            <div class="proy-panel" id="panel-3" hidden>
+                <div class="carrusel" data-total="6">
+                    <div class="carrusel-pista">
+                    <figure class="carrusel-slide">
+                        <img src="../img/multus1.jpg" alt="Serie de afiches de Multus" loading="lazy">
+                        <figcaption>Serie de afiches</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/multus2.jpg" alt="Carpeta institucional de Multus con el isotipo" loading="lazy">
+                        <figcaption>Carpeta institucional</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/multus3.jpg" alt="Tarjeta institucional de Multus en naranja" loading="lazy">
+                        <figcaption>Tarjeta institucional</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/multus4.jpg" alt="Dorso del sobre de Multus" loading="lazy">
+                        <figcaption>Sobre</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/multus5.jpg" alt="Pieza de carrusel para redes de Multus" loading="lazy">
+                        <figcaption>Redes sociales</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/multus6.jpg" alt="Abanico promocional de Multus" loading="lazy">
+                        <figcaption>Merch</figcaption>
+                    </figure>
+                    </div>
+                    <div class="carrusel-controles">
+                        <button class="carrusel-ant" type="button" aria-label="Imagen anterior">←</button>
+                        <p class="carrusel-info"><span class="carrusel-num">1</span> / 6 — <span class="carrusel-epigrafe">Serie de afiches</span></p>
+                        <button class="carrusel-sig" type="button" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
+
+                <div class="proy-desc">
+                    <h3>MULTUS — Identidad de marca</h3>
+                    <p class="ed-etiqueta">Identidad visual / Papelería y merch</p>
                 <p>Sistema de identidad para Multus, una agencia creativa de Martínez, Buenos Aires. El isotipo parte de la letra griega <strong>µ</strong> y la marca se construye sobre la idea de multiplicidad: <strong>muchas ideas, muchos lenguajes, muchas voces</strong>.</p>
                 <p>El sistema se aplica a una serie de afiches, papelería institucional —carpeta, tarjetas, sobre y anotador—, merch y piezas para redes sociales.</p>
-            </div>
-            <div class="galeria">
-                <figure>
-                    <img src="../img/multus1.jpg" alt="Serie de afiches de Multus">
-                    <figcaption>Serie de afiches</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/multus2.jpg" alt="Carpeta institucional de Multus con el isotipo">
-                    <figcaption>Carpeta institucional</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/multus3.jpg" alt="Tarjeta institucional de Multus en naranja">
-                    <figcaption>Tarjeta institucional</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/multus4.jpg" alt="Dorso del sobre de Multus">
-                    <figcaption>Sobre</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/multus5.jpg" alt="Pieza de carrusel para redes de Multus">
-                    <figcaption>Redes sociales</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/multus6.jpg" alt="Abanico promocional de Multus">
-                    <figcaption>Merch</figcaption>
-                </figure>
+                </div>
             </div>
         </article>
 
-        <article class="proyecto-destacado">
-            <div class="destacado-texto">
-                <h3>MALBA PUERTOS — Señalética</h3>
-                <p class="categoria">Sistema de señalética / Pictogramas</p>
+        <article class="proy">
+            <button class="proy-fila" type="button" aria-expanded="false" aria-controls="panel-4">
+                <span class="col-nombre">MALBA Puertos</span>
+                <span class="col-disciplina">Señalética</span>
+                <span class="col-piezas">Pictogramas y señales</span>
+                <span class="col-anio">2026</span>
+                <span class="col-signo" aria-hidden="true">+</span>
+            </button>
+
+            <div class="proy-panel" id="panel-4" hidden>
+                <div class="carrusel" data-total="6">
+                    <div class="carrusel-pista">
+                    <figure class="carrusel-slide">
+                        <img src="../img/senaletica1.jpg" alt="Portada del proyecto MALBA Puertos con sus coordenadas" loading="lazy">
+                        <figcaption>Relevamiento</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/senaletica2.jpg" alt="Pictogramas en versión positivo y negativo" loading="lazy">
+                        <figcaption>Pictogramas: positivo y negativo</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/senaletica3.jpg" alt="Retícula modular de construcción de los pictogramas" loading="lazy">
+                        <figcaption>Retícula modular</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/senaletica4.jpg" alt="Lámina de tipografía y bocetos del sistema de señalética" loading="lazy">
+                        <figcaption>Tipografía y bocetos</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/senaletica5.jpg" alt="Señal identificativa de cafetería con sus medidas" loading="lazy">
+                        <figcaption>Tipologías</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/senaletica6.jpg" alt="Señales aplicadas en el entorno del museo" loading="lazy">
+                        <figcaption>Aplicación en contexto</figcaption>
+                    </figure>
+                    </div>
+                    <div class="carrusel-controles">
+                        <button class="carrusel-ant" type="button" aria-label="Imagen anterior">←</button>
+                        <p class="carrusel-info"><span class="carrusel-num">1</span> / 6 — <span class="carrusel-epigrafe">Relevamiento</span></p>
+                        <button class="carrusel-sig" type="button" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
+
+                <div class="proy-desc">
+                    <h3>MALBA PUERTOS — Señalética</h3>
+                    <p class="ed-etiqueta">Sistema de señalética / Pictogramas</p>
                 <p>Sistema de pictogramas y señales para MALBA Puertos, en Escobar, desarrollado en equipo siguiendo el método de <strong>Joan Costa</strong>: relevamiento del espacio, definición de los mensajes, identidad visual, construcción y tipologías de señales.</p>
                 <p>Los pictogramas se construyen sobre una misma retícula modular para que el conjunto se lea como una familia, en versiones positivo y negativo, y se aplican a soportes de hormigón en diálogo con la arquitectura del museo.</p>
-            </div>
-            <div class="galeria">
-                <figure>
-                    <img src="../img/senaletica1.jpg" alt="Portada del proyecto MALBA Puertos con sus coordenadas">
-                    <figcaption>Relevamiento</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/senaletica2.jpg" alt="Pictogramas en versión positivo y negativo">
-                    <figcaption>Pictogramas: positivo y negativo</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/senaletica3.jpg" alt="Retícula modular de construcción de los pictogramas">
-                    <figcaption>Retícula modular</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/senaletica4.jpg" alt="Lámina de tipografía y bocetos del sistema de señalética">
-                    <figcaption>Tipografía y bocetos</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/senaletica5.jpg" alt="Señal identificativa de cafetería con sus medidas">
-                    <figcaption>Tipologías</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/senaletica6.jpg" alt="Señales aplicadas en el entorno del museo">
-                    <figcaption>Aplicación en contexto</figcaption>
-                </figure>
+                </div>
             </div>
         </article>
 
+        <article class="proy">
+            <button class="proy-fila" type="button" aria-expanded="false" aria-controls="panel-5">
+                <span class="col-nombre">Celedonio</span>
+                <span class="col-disciplina">Diseño editorial</span>
+                <span class="col-piezas">Catálogo, póster y postales</span>
+                <span class="col-anio">2026</span>
+                <span class="col-signo" aria-hidden="true">+</span>
+            </button>
 
+            <div class="proy-panel" id="panel-5" hidden>
+                <div class="carrusel" data-total="6">
+                    <div class="carrusel-pista">
+                    <figure class="carrusel-slide">
+                        <img src="../img/celedonio1.jpg" alt="Doble página del catálogo Celedonio con piezas de nácar" loading="lazy">
+                        <figcaption>Catálogo: apertura</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/celedonio2.jpg" alt="Doble página del capítulo Cristal" loading="lazy">
+                        <figcaption>Capítulo Cristal</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/celedonio3.jpg" alt="Doble página La mística de la perla" loading="lazy">
+                        <figcaption>Capítulo Perlas</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/celedonio4.jpg" alt="Póster de Celedonio enmarcado" loading="lazy">
+                        <figcaption>Póster</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/celedonio5.jpg" alt="Separadores de Celedonio en negro, dorado y blanco" loading="lazy">
+                        <figcaption>Separadores</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/celedonio6.jpg" alt="Postales de Celedonio" loading="lazy">
+                        <figcaption>Postales</figcaption>
+                    </figure>
+                    </div>
+                    <div class="carrusel-controles">
+                        <button class="carrusel-ant" type="button" aria-label="Imagen anterior">←</button>
+                        <p class="carrusel-info"><span class="carrusel-num">1</span> / 6 — <span class="carrusel-epigrafe">Catálogo: apertura</span></p>
+                        <button class="carrusel-sig" type="button" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
 
-        <article class="proyecto-destacado">
-            <div class="destacado-texto">
-                <h3>CELEDONIO — Catálogo</h3>
-                <p class="categoria">Diseño editorial / Catálogo</p>
+                <div class="proy-desc">
+                    <h3>CELEDONIO — Catálogo</h3>
+                    <p class="ed-etiqueta">Diseño editorial / Catálogo</p>
                 <p>Catálogo para Celedonio, una marca de joyería artesanal en plata, nácar y piedras naturales. Bajo la idea de <strong>"inspirados por la naturaleza, guiados por la belleza"</strong>, el diseño combina fotografía de producto, retratos y texturas orgánicas con una tipografía serif clásica y mucho aire.</p>
                 <p>La pieza se organiza en capítulos —como Cristal y Perlas— y se completa con un póster, separadores y postales que extienden el sistema editorial.</p>
-            </div>
-            <div class="galeria">
-                <figure>
-                    <img src="../img/celedonio1.jpg" alt="Doble página del catálogo Celedonio con piezas de nácar">
-                    <figcaption>Catálogo: apertura</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/celedonio2.jpg" alt="Doble página del capítulo Cristal">
-                    <figcaption>Capítulo Cristal</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/celedonio3.jpg" alt="Doble página La mística de la perla">
-                    <figcaption>Capítulo Perlas</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/celedonio4.jpg" alt="Póster de Celedonio enmarcado">
-                    <figcaption>Póster</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/celedonio5.jpg" alt="Separadores de Celedonio en negro, dorado y blanco">
-                    <figcaption>Separadores</figcaption>
-                </figure>
-                <figure>
-                    <img src="../img/celedonio6.jpg" alt="Postales de Celedonio">
-                    <figcaption>Postales</figcaption>
-                </figure>
+                </div>
             </div>
         </article>
 
-        
+        <article class="proy">
+            <button class="proy-fila" type="button" aria-expanded="false" aria-controls="panel-6">
+                <span class="col-nombre">Contenido para redes</span>
+                <span class="col-disciplina">Social media</span>
+                <span class="col-piezas">Feeds, Reels y edición</span>
+                <span class="col-anio">—</span>
+                <span class="col-signo" aria-hidden="true">+</span>
+            </button>
 
-        <article class="proyecto-card">
-            <figure class="col-1">
-                <img src="../img/%20carrrousel.webp" alt="Contenido para Redes">
-            </figure>
-            <div class="col-2">
-                <h3>Estrategia Visual & Edición de Video</h3>
-                <p class="categoria">Social Media</p>
+            <div class="proy-panel" id="panel-6" hidden>
+                <div class="carrusel" data-total="1">
+                    <div class="carrusel-pista">
+                    <figure class="carrusel-slide">
+                        <img src="../img/%20carrrousel.webp" alt="Contenido para Redes" loading="lazy">
+                        <figcaption>Contenido para Redes</figcaption>
+                    </figure>
+                    </div>
+                    <div class="carrusel-controles">
+                        <button class="carrusel-ant" type="button" aria-label="Imagen anterior">←</button>
+                        <p class="carrusel-info"><span class="carrusel-num">1</span> / 1 — <span class="carrusel-epigrafe">Contenido para Redes</span></p>
+                        <button class="carrusel-sig" type="button" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
+
+                <div class="proy-desc">
+                    <h3>Estrategia Visual & Edición de Video</h3>
+                    <p class="ed-etiqueta">Social Media</p>
                 <p>Creación de contenido para marcas, diseño de feeds dinámicos y edición de piezas cortas optimizadas para alto engagement.</p>
+                </div>
             </div>
         </article>
 
-        <article class="proyecto-card">
-            <figure class="col-1">
-                <img src="../img/gift.gif" alt="Marca Turu">
-            </figure>
-            <div class="col-2">
-                <h3>Turu - Marca Vivero</h3>
-                <p class="categoria">Branding & Identidad Visual</p>
+        <article class="proy">
+            <button class="proy-fila" type="button" aria-expanded="false" aria-controls="panel-7">
+                <span class="col-nombre">Turu</span>
+                <span class="col-disciplina">Branding</span>
+                <span class="col-piezas">Identidad para un vivero</span>
+                <span class="col-anio">2026</span>
+                <span class="col-signo" aria-hidden="true">+</span>
+            </button>
+
+            <div class="proy-panel" id="panel-7" hidden>
+                <div class="carrusel" data-total="2">
+                    <div class="carrusel-pista">
+                    <figure class="carrusel-slide">
+                        <img src="../img/Turu.png" alt="Marca Turu" loading="lazy">
+                        <figcaption>Marca</figcaption>
+                    </figure>
+                    <figure class="carrusel-slide">
+                        <img src="../img/gift.gif" alt="Marca Turu" loading="lazy">
+                        <figcaption>Marca Turu</figcaption>
+                    </figure>
+                    </div>
+                    <div class="carrusel-controles">
+                        <button class="carrusel-ant" type="button" aria-label="Imagen anterior">←</button>
+                        <p class="carrusel-info"><span class="carrusel-num">1</span> / 2 — <span class="carrusel-epigrafe">Marca</span></p>
+                        <button class="carrusel-sig" type="button" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
+
+                <div class="proy-desc">
+                    <h3>Turu - Marca Vivero</h3>
+                    <p class="ed-etiqueta">Branding & Identidad Visual</p>
                 <p>Desarrollo de sistema visual corporativo, papelería y diseño de merchandising técnico sobre estética de precisión y patrones geométricos.</p>
+                </div>
             </div>
         </article>
+        </div>
 
-    </div>
-</section>
-    </main>
+    </section>
+</main>
 
     <footer>
         <div class="footer-grid">
@@ -259,5 +397,6 @@
             </div>
         </div>
     </footer>
+    <script src="../js/proyectos.js" defer></script>
 </body>
 </html>

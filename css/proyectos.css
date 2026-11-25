@@ -1,204 +1,225 @@
 /* ==========================================================
-   PROYECTOS.CSS — estilos específicos de proyectos.html
+   PROYECTOS.CSS — índice de proyectos en forma de tabla.
+   Cada fila se despliega con un carrusel de fotos y la
+   descripción del proyecto.
    ========================================================== */
 
-#proyectos {
-    background-color: #fff;
-    padding: 4rem 5% 6rem;
-    min-height: 80vh;
+#proyectos .ed-titulo sup {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    vertical-align: top;
+    position: relative;
+    top: 0.6em;
+    margin-left: 0.3rem;
 }
 
-.proyectos-intro {
-    max-width: 1200px;
-    margin: 0 auto 5rem;
+/* Al abrir una fila, que no quede tapada por el menú fijo */
+.proy {
+    scroll-margin-top: 90px;
 }
 
-/* Cada proyecto: imagen a un lado, texto al otro */
-.proyecto-card {
-    max-width: 1200px;
-    margin: 0 auto 4rem;
+/* ---------- Columnas de la tabla ---------- */
+.proy-encabezado,
+.proy-fila {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-/* Alterna el lado de la imagen en los proyectos pares */
-.proyecto-card:nth-child(even) .col-1 {
-    order: 2;
-}
-
-.col-1 {
-    min-height: 400px;
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.col-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.proyecto-card:hover .col-1 img {
-    transform: scale(1.05);
-}
-
-.col-2 h3 {
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 500;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid #111;
-    margin-bottom: 0.8rem;
-}
-
-/* Categoría como etiqueta chica, sin recuadro */
-.categoria {
-    display: block;
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.08rem;
-    text-transform: uppercase;
-    margin-bottom: 0.8rem;
-}
-
-
-.proyecto-destacado {
-    max-width: 1200px;
-    margin: 0 auto 7rem;
-}
-
-/* Título grande con filete y, abajo, etiqueta a la izquierda y texto a la derecha */
-.destacado-texto {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    column-gap: 1rem;
-    margin-bottom: 2.5rem;
-}
-
-.destacado-texto h3 {
-    grid-column: 1 / -1;
-    font-size: clamp(2rem, 4.5vw, 3.6rem);
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: -0.035em;
-    padding-bottom: 0.3rem;
-    border-bottom: 1px solid #111;
-    margin-bottom: 1rem;
-}
-
-.destacado-texto .categoria {
-    grid-column: 1;
-    grid-row: 2 / span 2;
-    padding-top: 0.25rem;
-}
-
-.destacado-texto p:not(.categoria) {
-    grid-column: 2;
-    max-width: 720px;
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 0.8rem;
-}
-
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 1.3fr 2fr 70px 24px;
     gap: 1.5rem;
+    align-items: baseline;
 }
 
-.galeria figure {
-    overflow: hidden;
-    background-color: #ffffff;
+.proy-encabezado {
+    font-size: 0.8rem;
+    color: #555;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #111;
 }
 
-.galeria img {
-    display: block;
+.proy-fila {
     width: 100%;
-    aspect-ratio: 854 / 608;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #111;
+    text-align: left;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s, padding 0.3s;
 }
 
-.galeria figure:hover img {
-    transform: scale(1.06);
+.proy-fila:hover {
+    background-color: #f4f4f4;
+    padding-left: 0.6rem;
 }
 
-.galeria figcaption {
-    padding: 0.6rem 0;
-    border-top: 1px solid #111;
-    font-size: 0.65rem;
+.proy-fila:focus-visible {
+    outline: 1px solid #111;
+    outline-offset: 2px;
+}
+
+.col-nombre {
     font-weight: 500;
-    letter-spacing: 0.08rem;
-    text-transform: uppercase;
 }
 
-/* Las láminas aparecen una detrás de otra */
-.galeria figure {
+.col-anio {
+    font-variant-numeric: tabular-nums;
+}
+
+.col-signo {
+    text-align: right;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Fila abierta */
+.proy-fila[aria-expanded="true"] {
+    border-bottom-color: #111;
+}
+
+/* ---------- Panel desplegado ---------- */
+.proy-panel {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2.5rem;
+    padding: 1.8rem 0 3rem;
+    border-bottom: 1px solid #111;
     animation: aparecer 0.6s ease-out both;
 }
 
-.galeria figure:nth-child(2) { animation-delay: 0.1s; }
-.galeria figure:nth-child(3) { animation-delay: 0.2s; }
-.galeria figure:nth-child(4) { animation-delay: 0.3s; }
-.galeria figure:nth-child(5) { animation-delay: 0.4s; }
-.galeria figure:nth-child(6) { animation-delay: 0.5s; }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 1024px) {
-    .galeria {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.proy-panel[hidden] {
+    display: none;
 }
 
-/* Tablet y celular: imagen arriba y texto abajo */
-@media (max-width: 768px) {
-    #proyectos {
-        padding: 4rem 5%;
+/* ---------- Carrusel ---------- */
+.carrusel {
+    min-width: 0;   /* evita que el carrusel ensanche la grilla */
+}
+
+.carrusel-pista {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrusel-pista::-webkit-scrollbar {
+    display: none;
+}
+
+.carrusel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background-color: #f2f2f2;
+}
+
+.carrusel-slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 854 / 608;
+    object-fit: contain;
+}
+
+.carrusel-slide figcaption {
+    display: none;   /* el epígrafe se muestra en la barra de controles */
+}
+
+.carrusel-controles {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid #111;
+    margin-top: 0.6rem;
+}
+
+.carrusel-controles button {
+    font-family: inherit;
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+    color: #111;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    transition: opacity 0.3s;
+}
+
+.carrusel-controles button:hover {
+    opacity: 0.5;
+}
+
+.carrusel-controles button:disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.carrusel-info {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Si el proyecto tiene una sola imagen, no hacen falta flechas */
+.carrusel[data-total="1"] .carrusel-controles button {
+    visibility: hidden;
+}
+
+/* ---------- Descripción ---------- */
+.proy-desc h3 {
+    font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.8rem;
+}
+
+.proy-desc .ed-etiqueta {
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #111;
+}
+
+.proy-desc p:not(.ed-etiqueta) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .proy-encabezado,
+    .proy-fila {
+        grid-template-columns: 2fr 1.4fr 60px 20px;
     }
 
-    .proyecto-card {
+    .col-piezas {
+        display: none;
+    }
+
+    .proy-panel {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-
-    .proyecto-card:nth-child(even) .col-1 {
-        order: 0;
-    }
-
-    .col-1 {
-        min-height: 250px;
-    }
-
-    .proyecto-destacado {
-        margin-bottom: 5rem;
-    }
-
-    .destacado-texto {
-        grid-template-columns: 1fr;
-    }
-
-    .destacado-texto .categoria,
-    .destacado-texto p:not(.categoria) {
-        grid-column: 1;
-        grid-row: auto;
-    }
 }
 
-@media (max-width: 480px) {
-    .galeria {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+@media (max-width: 560px) {
+    .proy-encabezado,
+    .proy-fila {
+        grid-template-columns: 1fr 50px 20px;
+        gap: 0.8rem;
     }
 
-    .destacado-texto h3,
-    .col-2 h3 {
-        font-size: 1.35rem;
+    .col-disciplina {
+        display: none;
+    }
+
+    #proyectos .ed-titulo sup {
+        display: none;
     }
 }
