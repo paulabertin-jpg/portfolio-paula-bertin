@@ -38,6 +38,10 @@
 }
 
 /* ---------- Filas de datos ---------- */
+.bio-titulo + .bio-fila {
+    border-top: none;   /* la línea del título ya la separa */
+}
+
 .bio-fila {
     display: grid;
     grid-template-columns: 180px 1fr;
