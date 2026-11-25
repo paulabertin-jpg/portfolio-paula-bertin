@@ -1,92 +1,69 @@
 /* ==========================================================
-   CONTACTO.CSS — estilos de contacto.html y confirmacion.html
+   CONTACTO.CSS — formulario editorial (contacto.html)
+   La confirmación usa solo el sistema editorial de general.css
    ========================================================== */
-
-#contacto {
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
-    padding: 6rem 0;
-}
-
-#contacto > p {
-    margin-bottom: 2rem;
-}
 
 .form-contacto {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.8rem;
+    max-width: 760px;
 }
 
 .form-fila {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .form-campo {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.3rem;
 }
 
 .form-campo label {
-    font-weight: 600;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
 }
 
+/* Campos con solo una línea abajo, como un formulario impreso */
 .form-campo input,
 .form-campo textarea {
     font-family: inherit;
-    font-size: 1rem;
-    padding: 0.8rem 1rem;
-    border: 2px solid #333;
-    border-radius: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1.1rem;
+    color: #111;
+    background: transparent;
+    padding: 0.6rem 0;
+    border: none;
+    border-bottom: 1px solid #111;
+    border-radius: 0;
+    transition: border-color 0.3s;
 }
 
 .form-campo textarea {
     resize: vertical;
 }
 
+.form-campo input::placeholder,
+.form-campo textarea::placeholder {
+    color: #aaa;
+}
+
 .form-campo input:focus,
 .form-campo textarea:focus {
     outline: none;
-    border-color: #5d5c5c;
-    box-shadow: 0 0 0 4px #fffcdc;
+    border-bottom: 2px solid #111;
 }
 
 .form-contacto .btn {
     align-self: flex-start;
 }
 
-/* Página de confirmación */
-#confirmacion {
-    min-height: 70vh;
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
-    padding: 6rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-}
-
-#confirmacion h2 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-}
-
 /* ---------- Responsive ---------- */
 @media (max-width: 600px) {
-    #contacto,
-    #confirmacion {
-        padding: 4rem 0;
-    }
-
     .form-fila {
         grid-template-columns: 1fr;
     }
@@ -94,9 +71,5 @@
     .form-contacto .btn {
         align-self: stretch;
         text-align: center;
-    }
-
-    #confirmacion h2 {
-        font-size: 2.3rem;
     }
 }

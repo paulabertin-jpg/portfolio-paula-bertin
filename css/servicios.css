@@ -1,63 +1,22 @@
 /* ==========================================================
-   SERVICIOS.CSS — estilos específicos de servicios.html
+   SERVICIOS.CSS — cada servicio es una fila editorial numerada
    ========================================================== */
 
-#servicios {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 6rem 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+.servicio h3 {
+    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 0.6rem;
+    transition: transform 0.4s ease;
 }
 
-.pill {
-    background-color: #ffffff;
-    padding: 2rem;
-    min-height: 280px;
-    border-radius: 1.5rem;
-    border: 2px solid #333;
-    color: #000;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+.servicio p:not(.ed-etiqueta) {
+    max-width: 680px;
+    font-size: 0.95rem;
+    color: #444;
 }
 
-.pill:hover {
-    transform: translateY(-5px);
-    background-color: #faf9ef;
-    box-shadow: 0 10px 0 #333;
-}
-
-.pill h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Las tarjetas entran una detrás de otra */
-.pill {
-    animation: aparecer 0.6s ease-out both;
-}
-
-.pill:nth-child(2) { animation-delay: 0.1s; }
-.pill:nth-child(3) { animation-delay: 0.2s; }
-.pill:nth-child(4) { animation-delay: 0.3s; }
-
-/* ---------- Responsive ---------- */
-/* 4 columnas en escritorio, 2 en tablet y 1 en celular */
-@media (max-width: 1024px) {
-    #servicios {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 4rem 0;
-    }
-}
-
-@media (max-width: 600px) {
-    #servicios {
-        grid-template-columns: 1fr;
-    }
-
-    .pill {
-        min-height: auto;
-        padding: 1.5rem;
-    }
+.servicio:hover h3 {
+    transform: translateX(8px);
 }
